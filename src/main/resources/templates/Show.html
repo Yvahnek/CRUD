@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        Pobrane dane:
+        <span th:text=${game}>...</span><br>
+
+        <p><h2>Lista gier</h2></p><br>
+        <table class="table table-striped">
+            <tr><th>Nazwa gry</th><th>Producent</th><th>Data wydania</th><th>Aktualizować?</th><th>Usunąć?</th></tr>
+            <tr th:each="record: ${game}">
+                <td th:text="${record.name}">Nazwa gry</td>
+                <td th:text="${record.developer}">Producent</td>
+                <td th:text="${record.release}">Data wydania</td>
+                <td><a href="#" th:href="@{/redirect(id=${record.id})}" class="btn btn-primary"><i class="fa fa-trash-o fa-lg"></i>Aktualizuj</a></td>
+                <td><a href="#" th:href="@{/delete(id=${record.id})}" class="btn btn-danger"><i class="fa fa-trash-o fa-lg"></i>Usuń</a></td>
+            </tr>
+        </table>
+
+        <table class="table table-striped">
+            <tr><td> Wyszukaj gry wg producenta</td><td><form action="http://localhost:8080/search"><input name="developer"></td><td><input type="submit"></form></td></tr>
+
+        </table>
+    </body>
+</html>

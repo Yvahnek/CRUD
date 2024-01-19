@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dodawanie do listy gier</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <form action="http://localhost:8080/add">
+            <table>
+                <tr>
+                    <td>Podaj nazwę gry </td>
+                    <td><input name="name"></td>
+                </tr>
+                <tr>
+                    <td>Podaj datę wydania</td>
+                    <td><input name="release"></td>
+                </tr>
+                <tr>
+                    <td>Podaj producenta</td>
+                    <td><input name="developer"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    <input type="submit">
+                </td>
+            </table>
+        </form>
+    </body>
+</html>

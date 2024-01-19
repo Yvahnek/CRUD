@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dodawanie do listy gier</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <form th:action="@{/update}" th:object="${game}">
+            <table>
+                <tr>
+                    <td><input type="hidden" th:field="*{id}" id="id"></td>
+                </tr>
+                <tr>
+                    <td>Podaj nazwę gry </td>
+                    <td><input name="name" th:field="*{name}"></td>
+                </tr>
+                <tr>
+                    <td>Podaj datę wydania</td>
+                    <td><input name="release" th:field="*{release}"></td>
+                </tr>
+                <tr>
+                    <td>Podaj producenta</td>
+                    <td><input name="developer" th:field="*{developer}"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit">
+                    </td>
+            </table>
+        </form>
+    </body>
+</html>

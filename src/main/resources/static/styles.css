@@ -1,0 +1,54 @@
+body {
+    background-color: #2B2D30;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: arial, sans-serif;
+    line-height: 0.5;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: white;
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    background-color: #1E1F22;
+    border: 1px solid black;
+    color: white;
+    display: block;
+    font-family: arial, sans-serif;
+    padding: 5px;
+}
+
+li {
+    color: white;
+    list-style-type: square;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: cyan;
+}
